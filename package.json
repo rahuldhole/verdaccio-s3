@@ -1,0 +1,16 @@
+{
+  "name": "verdaccio",
+  "version": "6.1.2",
+  "type": "module",
+  "scripts": {
+    "build": "node main.js",
+    "start": "verdaccio --config ./verdaccio/config.yaml"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "verdaccio": "^6.1.2",
+    "verdaccio-minio": "^0.2.5"
+  }
+}

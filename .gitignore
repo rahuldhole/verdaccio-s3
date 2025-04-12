@@ -1,0 +1,4 @@
+node_modules/
+.verdaccio-db.json
+htpasswd
+minio/

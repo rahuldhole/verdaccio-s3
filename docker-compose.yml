@@ -1,0 +1,22 @@
+volumes:
+  minio:
+    driver: local
+
+services:
+  minio:
+    hostname: minio-development
+    image: bitnami/minio
+    mem_limit: 2048m
+    cpus: 0.3
+    ports:
+      - '9000:9000'
+      - '9002:9001'
+    volumes:
+      - 'minio:/bitnami/minio/data'
+    environment:
+      MINIO_ROOT_USER: rahul
+      MINIO_ROOT_PASSWORD: rahul
+      MINIO_DEFAULT_BUCKETS: rahulregistry
+      MINIO_ACCESS_KEY: this-is-not-so-secret
+      MINIO_SECRET_KEY: this-is-not-so-secret
+    restart: unless-stopped
